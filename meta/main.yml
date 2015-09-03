@@ -4,6 +4,7 @@ galaxy_info:
   description: Install Xcode and Command Line Tools on OSX 
   license: MIT 
   min_ansible_version: 1.2
+  categories:
   - development
   - system
 dependencies: []
