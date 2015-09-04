@@ -20,3 +20,8 @@
   command: cp -r /Volumes/Xcode/Xcode.app /Applications/
   args:
       creates: /Applications/Xcode.app/
+
+- name: Accept license agreement
+  command: /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -license accept 
+  become: yes
+  become_method: sudo 
