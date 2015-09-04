@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: edunham 
-  description: Install Xcode and Command Line Tools on OSX 
+  description: Install Xcode on OSX 
   license: MIT 
   min_ansible_version: 1.2
   categories:

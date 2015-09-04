@@ -20,17 +20,3 @@
   command: cp -r /Volumes/Xcode/Xcode.app /Applications/
   args:
       creates: /Applications/Xcode.app/
-
-- name: Upload Command Line Tools DMG to the host
-  copy: 
-      src={{ cmdline_tools_dmg }}
-      dest=/Users/{{ ansible_ssh_user }}
-
-- name: Mount the Command Line Tools with hdiutil
-  command: hdiutil attach /Users/{{ ansible_ssh_user }}/{{ cmdline_tools_dmg }}
-  args:
-      creates: /Volumes/Command\ Line\ Developer\ Tools/
-
-- name: Install the Command Line Tools
-  command: sudo installer -pkg /Volumes/Command\ Line\ Developer\ Tools/Command\ Line\ Tools\ \(OS\ X\ 10.10\).pkg -target /  
-

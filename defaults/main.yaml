@@ -2,4 +2,3 @@
 # defaults file for edunham.xcode
 
 xcode_dmg: Xcode_6.4.dmg
-cmdline_tools_dmg: Command_Line_Tools_OS_X_10.10_for_Xcode_6.4.dmg
