@@ -6,14 +6,14 @@
   register: xcode_dl_path
 
 - name: Upload Xcode DMG to the host
-  copy: 
+  copy:
       src={{ xcode_dmg }}
       dest=/Users/{{ ansible_ssh_user }}
   when: xcode_dl_path.stat.exists == False
 
 - name: Mount the Xcode DMG with hdiutil
   command: hdiutil attach /Users/{{ ansible_ssh_user }}/{{ xcode_dmg }}
-  args:  
+  args:
       creates: /Volumes/Xcode/
 
 - name: Install Xcode
@@ -22,6 +22,6 @@
       creates: /Applications/Xcode.app/
 
 - name: Accept license agreement
-  command: /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -license accept 
+  command: /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -license accept
   become: yes
-  become_method: sudo 
+  become_method: sudo

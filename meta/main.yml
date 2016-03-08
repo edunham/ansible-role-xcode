@@ -1,11 +1,11 @@
 ---
 galaxy_info:
-  author: edunham 
-  description: Install Xcode on OSX 
-  license: MIT 
+  author: edunham
+  description: Install Xcode on OSX
+  license: MIT
   min_ansible_version: 1.2
   categories:
   - development
   - system
 dependencies: []
-  
+
